@@ -1,7 +1,8 @@
 import os
+import turtle
 
 """
-*기말평균학점구하기*
+*기말 평균학점 구하기*
 
 py = 3
 mo = 2
@@ -27,5 +28,12 @@ while roop :
     cnt += 1
     
 """
+
+turtle.shape('turtle')
+
+turtle.penup()
+turtle.forward(300)
+turtle.pendown()
+turtle.forward(50)
 
 os.system("pause")
