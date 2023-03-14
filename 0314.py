@@ -1,5 +1,8 @@
 import os
 
+"""
+*기말평균학점구하기*
+
 py = 3
 mo = 2
 ex = 1
@@ -11,5 +14,8 @@ A = 4.5
 avg = (py * B + mo * A0 + ex * A) / (py + mo + ex)
 
 print("avg : %.2f" % avg)
+"""
+
+
 
 os.system("pause")
