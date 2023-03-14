@@ -18,7 +18,7 @@ print("avg : %.2f" % avg)
 """
 
 """
-*실전예제 while() 연습 문제*
+*while() 연습 문제*
 
 cnt = 1
 roop = True
@@ -29,11 +29,18 @@ while roop :
     
 """
 
-turtle.shape('turtle')
+"""
+*무한 거북이*
 
-turtle.penup()
-turtle.forward(300)
-turtle.pendown()
-turtle.forward(50)
+turtle.size(5)
+turtle.color("blue")
+
+while(True) :
+    deg = int(input("degree : "))
+    dis = int(input("distance : "))
+    
+    turtle.right(deg)
+    turtle.forward(dis)
+"""
 
 os.system("pause")
