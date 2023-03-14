@@ -10,6 +10,6 @@ A = 4.5
 
 avg = (py * B + mo * A0 + ex * A) / (py + mo + ex)
 
-print("%.2f" % avg)
+print("avg : %.2f" % avg)
 
 os.system("pause")
