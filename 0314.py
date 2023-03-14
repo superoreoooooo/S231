@@ -32,12 +32,13 @@ while roop :
 """
 *무한 거북이*
 
+turtle.shape('turtle')
 turtle.size(5)
 turtle.color("blue")
 
 while(True) :
-    deg = int(input("degree : "))
-    dis = int(input("distance : "))
+    deg = int(input("deg : "))
+    dis = int(input("dist : "))
     
     turtle.right(deg)
     turtle.forward(dis)
