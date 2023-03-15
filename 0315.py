@@ -1,4 +1,6 @@
+"""
 print("\"hello\"")
+"""
 
 """
 
@@ -41,6 +43,16 @@ print(ss.isupper(), "/", ss.islower())
 ss = "안녕하세요 안녕하세요"
 
 print(ss.count("안녕하세요"), ss.count("안녕히가세요"))
+
+"""
+
+"""
+
+*문자열의 위치*
+
+ss = "안녕하세요 python"
+
+print(ss.find("요"), ss.find("p"))
 
 """
 
