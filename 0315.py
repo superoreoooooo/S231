@@ -50,9 +50,9 @@ print(ss.count("안녕하세요"), ss.count("안녕히가세요"))
 
 *문자열의 위치*
 
-ss = "안녕하세요 python"
+ss = "안녕하세요 python python"
 
-print(ss.find("요"), ss.find("p"))
+print(ss.find("요"), ss.find("p"), ss.find("p", 8))
 
 """
 
