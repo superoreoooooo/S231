@@ -1,4 +1,5 @@
 import turtle
+import random
 
 """
 
@@ -18,3 +19,13 @@ while True :
 turtle.done()
 """
 
+turtle.shape('turtle')
+turtle.penup()
+
+strlist = ["aaa", "bbb", "ccc", "ddd", "eee", "fff", "ggg"]
+
+for i in range(30) :
+    text = strlist[random.randint(0, len(strlist) - 1)]
+    turtle.goto(random.randint(-300, 300), random.randint(-300, 300))
+    turtle.write(text, font=("Arial", 30))
+turtle.done()
