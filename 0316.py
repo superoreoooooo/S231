@@ -35,11 +35,16 @@ for i in range(30) :
 turtle.done()
 """
 
-num = int(input("input : "))
+score = int(input("score : "))
 
-if num > 100 and num < 1000 :
-    print("100 ~ 1000")
-elif num < 100 :
-    print("lower than 100")
+if score >= 90 :
+    print("A", end='')
+elif score >= 80 :
+    print("B", end='')
+elif score >= 70 :
+    print("C", end='')
+elif score >= 60 :
+    print("D", end='')
 else :
-    print("its over 1000")
+    print("F", end='')
+print("학점입니다.")
