@@ -35,6 +35,10 @@ for i in range(30) :
 turtle.done()
 """
 
+"""
+
+*if / elif / else*
+
 score = int(input("score : "))
 
 if score >= 90 :
@@ -48,3 +52,4 @@ elif score >= 60 :
 else :
     print("F", end='')
 print("학점입니다.")
+"""
