@@ -1,5 +1,9 @@
 import turtle
 
+"""
+
+*실전예제 -> 모험을 떠나는 거북이*
+
 turtle.shape('turtle')
 turtle.penup()
 
@@ -12,3 +16,5 @@ while True :
     turtle.write(text, font=("Arial", 30))
     
 turtle.done()
+"""
+
