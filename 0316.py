@@ -19,6 +19,10 @@ while True :
 turtle.done()
 """
 
+"""
+
+*자유롭게? 모험을 떠나는 거북이*
+
 turtle.shape('turtle')
 turtle.penup()
 
@@ -29,3 +33,5 @@ for i in range(30) :
     turtle.goto(random.randint(-300, 300), random.randint(-300, 300))
     turtle.write(text, font=("Arial", 30))
 turtle.done()
+"""
+
