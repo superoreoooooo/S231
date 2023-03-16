@@ -35,3 +35,9 @@ for i in range(30) :
 turtle.done()
 """
 
+num = 101
+
+if num < 100 :
+    print("smaller than 100")
+else :
+    print("bigger than 100")
