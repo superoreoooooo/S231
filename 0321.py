@@ -1,5 +1,6 @@
 import random
 import math
+import numpy as np
 
 """
 
@@ -58,11 +59,24 @@ print(hap)
 
 """
 
+"""
 fac = 1
 
 for i in range (1, 6, 1) :
     fac *= i
 
 print(fac)
-
 print(math.factorial(5))
+"""
+
+"""
+sum = 0
+
+for i in range (1001, 2001, 2) :
+    sum += i
+
+print(sum)
+"""
+
+list = [10, 50, 100, 50, 200]
+a = np.shape(list)
