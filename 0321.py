@@ -13,7 +13,7 @@ print("hello")
 
 status = ""
 
-pick = input("input : ")
+pick = input("my input : ")
 pc = random.choice(["rock", "paper", "scissors"])
 
 if (pick == pc) :
@@ -30,12 +30,12 @@ else :
         else :
             status = "lose"
     elif (pick == "scissors") :
-        if (pc == paper) :
+        if (pc == "paper") :
             status = "win"
         else :
             status = "lose"
     else :
-        status = "draw"
+        status = "error"
 
-print("pc : ", pc)
-print(status)   
+print("pc input :", pc)
+print(status)
