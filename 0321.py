@@ -1,4 +1,5 @@
 import random
+import math
 
 """
 
@@ -42,6 +43,8 @@ print("pc input :", pc)
 print(status)
 """
 
+
+"""
 hap = 0
 s = ""
 
@@ -52,3 +55,14 @@ for i in range (1, 11, 1) :
     else :
         print(i, end = " + ")
 print(hap)
+
+"""
+
+fac = 1
+
+for i in range (1, 6, 1) :
+    fac *= i
+
+print(fac)
+
+print(math.factorial(5))
