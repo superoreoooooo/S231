@@ -11,6 +11,7 @@ else :
 print("hello")
 """
 
+"""
 status = ""
 
 pick = input("my input : ")
@@ -39,3 +40,5 @@ else :
 
 print("pc input :", pc)
 print(status)
+"""
+
