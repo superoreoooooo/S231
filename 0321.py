@@ -43,8 +43,12 @@ print(status)
 """
 
 hap = 0
+s = ""
 
 for i in range (1, 11, 1) :
     hap += i
-
+    if (i == 10) :
+        print(i, end = " = ")
+    else :
+        print(i, end = " + ")
 print(hap)
