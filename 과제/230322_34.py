@@ -1,5 +1,5 @@
 import random
-"""
+
 #실습1
 
 c = int(input("출력할 단수 입력 : "))
@@ -46,21 +46,10 @@ for i in range(w, num + 1, w) :
     
 print("\n")
 
-"""
 #실습5 쉬운버전
-"""
+
 numbers = list(range(1, 46, 1))
 
 for i in range (0, 10, 1) :
     lotto = random.sample(numbers, 5)
     print(lotto)
-"""
-#실습5 어려운버전
-
-def check(num) :
-    return num + 1
-
-numbers = list(range(1, 46, 1))
-
-for i in range (0, 10, 1) :
-    print(check(i))
