@@ -46,7 +46,7 @@ for i in range(w, num + 1, w) :
     
 print("\n")
 
-#실습5 쉬운버전
+#실습5
 
 numbers = list(range(1, 46, 1))
 
