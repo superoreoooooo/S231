@@ -77,6 +77,3 @@ for i in range (1001, 2001, 2) :
 
 print(sum)
 """
-
-list = [10, 50, 100, 50, 200]
-a = np.shape(list)
