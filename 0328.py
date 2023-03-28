@@ -62,10 +62,9 @@ for i in range(0, len(l4)) :
 print("9 :", l4)
 
 l5 = l4.copy()
-l6 = l4.copy()
 
-for i in range(0, len(l5), 1) :
-    if (l5[i] >= 10) :
-        l6.remove(l5[i])
+for i in range(0, len(l4), 1) :
+    if (l4[i] >= 10) :
+        l5.remove(l4[i])
         
-print("10 :", l6)
+print("10 :", l5)
