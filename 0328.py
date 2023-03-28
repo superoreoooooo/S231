@@ -20,26 +20,26 @@ print(wiseSay[random.randint(0, len(wiseSay) - 1)])
 """
 
 l = list(range(0, 10))
-print(l)
+print("1 :",l)
 
 l[1] = 100
-print(l)
+print("2 :", l)
 
 sum = 0
 for i in range(0, len(l)) :
     sum += l[i]
 
-print(sum)
+print("3 :", sum)
 
 l[2] = 'not number'
-print(l)
+print("4 :", l)
 
 
 for i in range(10, 21) :
     l.append(i)
     
-print(l)
-print(len(l))
+print("5 :", l)
+print("6 :", len(l))
 
 l2 = l.copy()
 l3 = l.copy()
@@ -48,18 +48,18 @@ l4 = l.copy()
 for i in range(0, 9) :
     del(l2[0])
     
-print(l2)
+print("7 :", l2)
 
 for i in range(3, len(l3)) :
     del(l3[3])
 
-print(l3)
+print("8 :", l3)
     
 for i in range(0, len(l4)) :
     if (type(l4[i]) is str) :
         l4[i] = i
         
-print(l4)
+print("9 :", l4)
 
 l5 = l4.copy()
 l6 = []
@@ -68,4 +68,4 @@ for i in range(0, len(l5), 1) :
     if (l5[i] < 10) :
         l6.append(l5[i])
         
-print(l6)
+print("10 :", l6)
