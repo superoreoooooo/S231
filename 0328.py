@@ -62,10 +62,10 @@ for i in range(0, len(l4)) :
 print("9 :", l4)
 
 l5 = l4.copy()
-l6 = []
+l6 = l4.copy()
 
 for i in range(0, len(l5), 1) :
-    if (l5[i] < 10) :
-        l6.append(l5[i])
+    if (l5[i] >= 10) :
+        l6.remove(l5[i])
         
 print("10 :", l6)
