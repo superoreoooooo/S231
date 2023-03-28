@@ -20,7 +20,10 @@ print(wiseSay[random.randint(0, len(wiseSay) - 1)])
 """
 
 l = list(range(0, 10))
+print(l)
+
 l[1] = 100
+print(l)
 
 sum = 0
 for i in range(0, len(l)) :
@@ -29,32 +32,40 @@ for i in range(0, len(l)) :
 print(sum)
 
 l[2] = 'not number'
+print(l)
+
 
 for i in range(10, 21) :
     l.append(i)
-
+    
+print(l)
 print(len(l))
 
 l2 = l.copy()
 l3 = l.copy()
 l4 = l.copy()
-l5 = l.copy()
 
 for i in range(0, 9) :
     del(l2[0])
+    
+print(l2)
 
 for i in range(3, len(l3)) :
     del(l3[3])
+
+print(l3)
     
 for i in range(0, len(l4)) :
     if (type(l4[i]) is str) :
         l4[i] = i
-
-for i in range(0, len(l5)) :
-    if (l5[i] >= 10) :
-        l5.remove(l5[i])
-
-print(l2)
-print(l3)
+        
 print(l4)
-print(l5)
+
+l5 = l4.copy()
+l6 = []
+
+for i in range(0, len(l5), 1) :
+    if (l5[i] < 10) :
+        l6.append(l5[i])
+        
+print(l6)
