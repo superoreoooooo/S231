@@ -8,9 +8,7 @@ while True:
     if (k == "") :
         break
     
-    v = int(input("재고량 : "))
-    
-    data[k] = v
+    data[k] = int(input("재고량 : "))
 
 print("**** 물품과 재고량 확인 ****")
 
