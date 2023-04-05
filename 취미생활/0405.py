@@ -12,7 +12,7 @@ for dx in range(0, x, 1) :
             ly.append(dy + 1)
     lx[dx] = ly
 
-for i in range(0, y, 1) :
-    for j in range(0, x, -1) :
-        print(lx[j][i], end=" ")
+for i in range(0, x, 1) :
+    for j in range(0, y, 1) :
+        print(lx[i][j], end=" ")
     print("")
