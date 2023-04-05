@@ -35,5 +35,7 @@ public class Main {
             }
             System.out.println("");
         }
+
+        System.out.println("박효기 바보");
     }
 }
