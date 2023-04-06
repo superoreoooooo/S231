@@ -4,12 +4,12 @@ numbers = list(range(1, 46, 1))
 lotto = []
 
 def getNum(l) :
-    n = 0
     while (True) :
         n = random.choice(numbers)
-        if (n not in lotto) :
+        if (n in lotto) :
+            getNum(l)
+        else :
             return n
-            break
         
 for i in range(0, 5, 1) :
     lotto.append(getNum(numbers))
