@@ -20,17 +20,19 @@ print("현재 날짜와 시간 =>", curDate, "\n100일 후 날짜와 시간 =>",
 """
 
 """
-def isTrue(pwd) :
-    return pwd.isalnum()
-
-while (True) :
+def isTrue() :
     pwd = input("input password : ")
-    if (isTrue(pwd)) :
+    if (pwd.isalnum()) :
+        return True
+    else :
+        return False
+    
+while (True) :
+    if (isTrue()) :
         print("비밀번호가 올바르게 생성되었어요.")
-        break
     else :
         print("오류! 비밀번호가 규칙에 맞지 않습니다.")
-        
+
 """
 
 print("#1")
