@@ -20,6 +20,7 @@ print("현재 날짜와 시간 =>", curDate, "\n100일 후 날짜와 시간 =>",
 """
 
 """
+
 def isTrue() :
     pwd = input("input password : ")
     if (pwd.isalnum()) :
