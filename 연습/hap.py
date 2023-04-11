@@ -9,7 +9,7 @@ def calc(v1, v2, op) :
         case ("/") :
             return v1 / v2
         case (_) :
-            return "ERROR"
+            return ""
 
 l = [int(input("1st : ")), str(input("op : ")), int(input("2nd : "))]
 
