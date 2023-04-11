@@ -32,4 +32,55 @@ while (True) :
         print("오류! 비밀번호가 규칙에 맞지 않습니다.")
         
 """
+print("#1")
 
+let = "letters"
+
+print(let[0], let[2])
+
+
+
+print("#2")
+
+wrd = "12가3450"
+print(wrd[3:])
+
+
+
+print("#3")
+
+tList = ['배트맨', '슈퍼맨', '아이언맨']
+
+for i in range(0, len(tList) + 1, 1) :
+    if (tList[i] == "슈퍼맨" and tList[i + 1] == "아이언맨") :
+        tList[i + 1] = "헐크"
+        tList.append("아이언맨")
+        
+print(tList)
+
+
+
+print("#4")
+
+tList.remove("헐크")
+
+print(tList)
+
+
+
+print("#5")
+
+l1 = [1, 2, 3]
+l2 = [4, 5, 6]
+
+ls = l1 + l2
+
+print(ls)
+
+
+
+print("#6")
+
+tList = list(range(0, 11))
+
+print(tList)
