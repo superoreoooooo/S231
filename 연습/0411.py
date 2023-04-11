@@ -47,13 +47,15 @@ print(let[0], let[2])
 print("#2")
 
 wrd = "12가3450"
-print(wrd[3:])
+print(wrd[-4:])
 
 
 
 print("#3")
 
 tList = ['배트맨', '슈퍼맨', '아이언맨']
+
+#tList.insert(2, "헐크")
 
 for i in range(0, len(tList) + 1, 1) :
     if (tList[i] == "슈퍼맨" and tList[i + 1] == "아이언맨") :
@@ -85,7 +87,7 @@ print(ls)
 
 print("#6")
 
-tList = list(range(0, 11))
+tList = list(range(1, 11))
 
 print("MAX :", max(tList), "/ MIN :", min(tList))
 
