@@ -83,4 +83,55 @@ print("#6")
 
 tList = list(range(0, 11))
 
+print("MAX :", max(tList), "/ MIN :", min(tList))
+
+
+
+print("#7")
+
+tList = list(range(1, 100, 2))
+
+sum = 0
+
+for i in tList :
+    sum += i
+
+print("Length :", len(tList), "/ sum :", sum)
+
+
+
+print("#8")
+
+tup = (1, 2, 3, 4, 5)
+tList = list()
+
+for i in tup :
+    tList.append(i)
+
+print(tList)
+del(tup)
+
+
+
+print("#9")
+
+tup = tuple(tList)
+
+print(tup)
+
+
+
+print("#10")
+
+tList = [c / 10 for c in range(1, 101, 1)]
+    
+print("List :", tList, "\n Length :", len(tList))
+
+
+
+print("#11")
+
+for i in range(0, len(tList), 1) :
+    tList[i] = int(tList[i] * 10)
+
 print(tList)
