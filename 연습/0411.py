@@ -32,6 +32,7 @@ while (True) :
         print("오류! 비밀번호가 규칙에 맞지 않습니다.")
         
 """
+
 print("#1")
 
 let = "letters"
