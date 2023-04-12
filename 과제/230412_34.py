@@ -41,7 +41,7 @@ else :
 l = list(v for v in range(1, 100, 2))
 
 for i in l :
-    if (i >= 55 and i <= 64) :
+    if (i >= 55 and i < 64) :
         print(i, end = " ")
 
 print("")
@@ -55,4 +55,25 @@ for i in l :
 print("")
 
 #7
+
+score = int(input("점수 => "))
+
+print(score >= 70)
+
+#8
+
+print("abc" == "가나다")
+
+#9
+
+score = int(input("점수 => "))
+
+if (score >= 90) :
+    print("A")
+elif (score >= 80) :
+    print("B")
+else :
+    print("C")
+
+#10
 
