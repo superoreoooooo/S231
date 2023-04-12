@@ -103,6 +103,14 @@ for i in range(1, 101, 1) :
     if (i % 6 == 1 or i % 5 == 2) :
         print(i, end = " ")
 
+print("")
 
 #14
 
+cnt = 0
+
+while(True) :
+    cnt += 1
+    print(cnt, end = " ")
+    if (cnt >= 100) :
+        break
