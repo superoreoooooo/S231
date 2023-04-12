@@ -77,3 +77,25 @@ else :
 
 #10
 
+for i in range(0, 10, 1) :
+    for j in range(0, i + 1, 1) :
+        print("*", end = "")
+    print("")
+    
+#11
+
+sum = 0
+
+for i in range(101, 201, 2) :
+    sum += i
+
+print(sum)
+
+#12
+
+for i in range(2, 10, 1) :
+    for j in range(2, 10, 1) :
+        print(i, "*", j, "=", i*j)
+
+#13
+
