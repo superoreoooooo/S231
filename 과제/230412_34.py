@@ -32,13 +32,13 @@ name = input("이름 : ")
 age = input("나이 : ")
 
 if (int(age) >= 20) : 
-    print(f'({age})', "성인")
+    print(name, f'({age})', "성인")
 else :
-    print(f'({age})', "미성년자")
+    print(name, f'({age})', "미성년자")
 
 #5
 
-l = list(range(1, 100, 2))
+l = list(v for v in range(1, 100, 2))
 
 for i in l :
     if (i >= 55 and i <= 64) :
