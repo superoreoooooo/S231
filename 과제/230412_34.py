@@ -99,3 +99,6 @@ for i in range(2, 10, 1) :
 
 #13
 
+for i in range(0, 101, 1) :
+    if (i % 6 == 1 or i % 5 == 2) :
+        print(i, end = " ")
