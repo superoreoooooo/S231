@@ -111,6 +111,5 @@ cnt = 0
 
 while(True) :
     cnt += 1
-    print(cnt, end = " ")
     if (cnt >= 100) :
         break
