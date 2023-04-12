@@ -86,7 +86,7 @@ for i in range(0, 10, 1) :
 
 sum = 0
 
-for i in range(101, 201, 2) :
+for i in range(101, 200, 2) :
     sum += i
 
 print(sum)
