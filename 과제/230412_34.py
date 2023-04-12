@@ -17,7 +17,7 @@ print(a + b)
 name = input("이름 : ")
 age = input("나이 : ")
 
-print(name + " (" + age + ")")
+print(name, f'({age})')
 
 #4
 
