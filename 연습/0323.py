@@ -21,7 +21,7 @@ while True :
     n2 = int(input("n2 : "))
     
     sum = n1 + n2
-    print(num)
+    print(sum)
     
 print("clear")
 
