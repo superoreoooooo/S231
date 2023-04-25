@@ -402,7 +402,7 @@ loseCause = ""
 while True :
   cnt += 1
   p = random.randint(1, 10)
-  if (str(cnt).count("3") >= 1 or str(cnt).count("6") >= 1 or str(cnt).count("9") >= 1) : #369 배수일때
+  if (str(cnt).count("3") >= 1 or str(cnt).count("6") >= 1 or str(cnt).count("9") >= 1) : #369 포함일때
     if (p != 5) : #정답
       print("컴퓨터:", "짝")
     else : #오답
@@ -420,7 +420,7 @@ while True :
       print("컴퓨터:", str(cnt))
   cnt += 1
   s = input("유저: ")
-  if (str(cnt).count("3") >= 1 or str(cnt).count("6") >= 1 or str(cnt).count("9") >= 1) : #369 배수일때
+  if (str(cnt).count("3") >= 1 or str(cnt).count("6") >= 1 or str(cnt).count("9") >= 1) : #369 포함일때
     if (str(s) != "짝") : #오답
       whoWin = "Computer"
       loseCause = "짝"
