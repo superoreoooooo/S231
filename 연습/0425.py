@@ -9,6 +9,7 @@ for i in f2 :
     else :
         fList.append(i)
 
-print(fList)
+for i in fList :
+    print(i, end = " ")
 
 f.close()
