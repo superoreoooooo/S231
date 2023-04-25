@@ -46,7 +46,7 @@ def copy(fn1, fn2) :
     
     print("복제 완료~!")
     
-copy("C:/Users/user/Documents/python/pytest/연습/kia.txt", "C:/Users/user/Documents/python/pytest/연습/write.txt")
+#copy("C:/Users/user/Documents/python/pytest/연습/kia.txt", "C:/Users/user/Documents/python/pytest/연습/write.txt")
 
 f = open("C:/Users/user/Documents/python/pytest/연습/keyboard.txt", "w", encoding="UTF-8")
 
