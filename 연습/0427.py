@@ -108,6 +108,12 @@ class Car(Vehicle) :
         print("=====================")
         self.VehicleID = ID
         self.engine = value
+        
+    """
+    #오버라이딩?
+    def __del__(self) :
+        print("도망가~")
+    """
 
 class Bike(Vehicle) :
     wheelCnt = 0
