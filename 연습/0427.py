@@ -73,6 +73,9 @@ class Vehicle:
     
     def __init__(self, ID) :
         self.VehicleID = ID
+        
+    def __add__(self, other) :
+        print(f"{self.__name}과 {other.__name}가 충돌했습니다.")
     
     def goForward(self) :
         print(self.__name, "is going forward :", self.__maxSpeed)
@@ -106,6 +109,14 @@ class Car(Vehicle) :
         self.VehicleID = ID
         self.engine = value
 
+class Bike(Vehicle) :
+    wheelCnt = 0
+    
+    def __init__(self, ID) :
+        print("=====================")
+        self.VehicleID = ID
+        self.wheelCnt = 2
+
 car1 = Car("AABB11", "V8")
 
 car1.setMaxSpeed(100)
@@ -116,14 +127,6 @@ car1.goBackward()
 
 print(car1.getName(), car1.engine)
 
-class Bike(Vehicle) :
-    wheelCnt = 0
-    
-    def __init__(self, ID) :
-        print("=====================")
-        self.VehicleID = ID
-        self.wheelCnt = 2
-
 bike1 = Bike("BBCC22")
 
 bike1.setMaxSpeed(80)
@@ -133,3 +136,5 @@ bike1.goForward()
 bike1.goBackward()
 
 print(bike1.getName(), bike1.wheelCnt)
+
+car1 + bike1
