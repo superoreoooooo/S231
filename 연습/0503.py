@@ -9,7 +9,10 @@ root.title("테스트")
 root.geometry("1024x768")
 root.resizable(width = False , height = False)
 
-c1 = Canvas(root, width=1024, height=768)
+l1 = Label(root, text = "?")
+l1.pack()
+
+c1 = Canvas(root, width=1024, height=700)
 c1.pack()
 
 colors = ["red", "blue", "white", "yellow", "black"]
@@ -19,11 +22,14 @@ y1 = 0
 x2 = 0
 y2 = 0
 
+color = random.choice(colors)
+
 def clickL(event) :
-    global x1, y1
+    global x1, y1, color
     
     x1 = event.x
     y1 = event.y
+    
 
 def releaseL(event) :
     global x2, y2
@@ -37,8 +43,11 @@ def clear(event) :
     c1.delete("all")
     
 def draw() :
-    global x1, x2, y1, y2
-    c1.create_rectangle(x1, y1, x2, y2, fill = random.choice(colors))
+    global x1, x2, y1, y2, color
+    c1.create_rectangle(x1, y1, x2, y2, fill = color)
+    
+    color = random.choice(colors)
+    l1.configure(text = color)
     
 root.bind("<Button-1>", clickL)
 root.bind("<Button-2>", clear)
