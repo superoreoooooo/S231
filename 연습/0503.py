@@ -12,7 +12,7 @@ root.resizable(width = False , height = False)
 l1 = Label(root, text = "?")
 l1.pack()
 
-c1 = Canvas(root, width=1024, height=700)
+c1 = Canvas(root, width=1024, height=768)
 c1.pack()
 
 colors = ["red", "blue", "white", "yellow", "black"]
