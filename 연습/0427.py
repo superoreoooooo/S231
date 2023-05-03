@@ -144,3 +144,5 @@ bike1.goBackward()
 print(bike1.getName(), bike1.wheelCnt)
 
 car1 + bike1
+
+print(bike1.getName())
