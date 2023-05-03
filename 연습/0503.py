@@ -30,18 +30,19 @@ def releaseL(event) :
     
     x2 = event.x
     y2 = event.y
+    
+    draw()
 
 def clear(event) :
     c1.delete("all")
     
-def draw(event) :
+def draw() :
     global x1, x2, y1, y2
     c1.create_rectangle(x1, y1, x2, y2, fill = random.choice(colors))
     
 root.bind("<Button-1>", clickL)
 root.bind("<Button-2>", clear)
 root.bind("<ButtonRelease-1>", releaseL)
-root.bind("<Button-3>", draw)
 
 
 """
