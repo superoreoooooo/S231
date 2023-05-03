@@ -105,21 +105,21 @@ class Car(Vehicle) :
     engine = ""
     
     def __init__(self, ID, value) :
-        print("=====================")
         self.VehicleID = ID
         self.engine = value
         
-    """
-    #오버라이딩?
+    def goForward(self) :
+        print("going forward :", 21)
+    
+    """#오버라이딩?
     def __del__(self) :
-        print("도망가~")
-    """
+        print("도망가~")"""
+    
 
 class Bike(Vehicle) :
     wheelCnt = 0
     
     def __init__(self, ID) :
-        print("=====================")
         self.VehicleID = ID
         self.wheelCnt = 2
 
@@ -146,3 +146,5 @@ print(bike1.getName(), bike1.wheelCnt)
 car1 + bike1
 
 print(bike1.getName())
+
+super(Car, car1).goForward()
