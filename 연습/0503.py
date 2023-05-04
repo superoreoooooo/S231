@@ -45,13 +45,17 @@ def draw() :
     global x1, x2, y1, y2, color
     c1.create_rectangle(x1, y1, x2, y2, fill = color)
     
+    swapColor()
+    
+def swapColor(event = "") :
+    global color
     color = random.choice(colors)
     l1.configure(text = color)
     
 root.bind("<Button-1>", clickL)
 root.bind("<Button-2>", clear)
 root.bind("<ButtonRelease-1>", releaseL)
-
+root.bind("<Button-3>", swapColor)
 
 """
 def clickL(event) :
