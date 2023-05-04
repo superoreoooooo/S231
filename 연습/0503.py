@@ -9,20 +9,19 @@ root.title("테스트")
 root.geometry("1024x768")
 root.resizable(width = False , height = False)
 
-l1 = Label(root, text = "?")
+colors = ["red", "blue", "white", "yellow", "black"]
+color = random.choice(colors)
+
+l1 = Label(root, text = color)
 l1.pack()
 
 c1 = Canvas(root, width=1024, height=768)
 c1.pack()
 
-colors = ["red", "blue", "white", "yellow", "black"]
-
 x1 = 0
 y1 = 0
 x2 = 0
 y2 = 0
-
-color = random.choice(colors)
 
 def clickL(event) :
     global x1, y1, color
