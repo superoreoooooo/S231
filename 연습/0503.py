@@ -47,7 +47,7 @@ def draw() :
     
     swapColor()
     
-def swapColor(event = "") :
+def swapColor(event = None) :
     global color
     color = random.choice(colors)
     l1.configure(text = color)
