@@ -9,69 +9,6 @@ root.title("테스트")
 root.geometry("1024x768")
 root.resizable(width = False , height = False)
 
-colors = ["red", "blue", "white", "yellow", "black"]
-color = random.choice(colors)
-
-l1 = Label(root, text = color)
-l1.pack()
-
-c1 = Canvas(root, width=1024, height=768)
-c1.pack()
-
-x1 = 0
-y1 = 0
-x2 = 0
-y2 = 0
-
-def clickL(event) :
-    global x1, y1, color
-    
-    x1 = event.x
-    y1 = event.y
-    
-
-def releaseL(event) :
-    global x2, y2
-    
-    x2 = event.x
-    y2 = event.y
-    
-    draw()
-
-def clear(event) :
-    c1.delete("all")
-    
-def draw() :
-    global x1, x2, y1, y2, color
-    c1.create_rectangle(x1, y1, x2, y2, fill = color)
-    
-    swapColor()
-    
-def swapColor(event = None) :
-    global color
-    color = random.choice(colors)
-    l1.configure(text = color)
-    
-root.bind("<Button-1>", clickL)
-root.bind("<Button-2>", clear)
-root.bind("<ButtonRelease-1>", releaseL)
-root.bind("<Button-3>", swapColor)
-
-"""
-def clickL(event) :
-    l.configure(text = random.randint(1, 10))
-
-def clickR(event) :
-    l.configure(text = f"mouse X:{event.x}\nmouse Y:{event.y}")
-
-root.bind("<Button-1>", clickL)
-root.bind("<Button-3>", clickR)
-
-l = Label(root, text = 0, font=("", 100))
-l.pack()
-"""
-
-"""
 
 cnt = 0
 chk = IntVar()
@@ -112,13 +49,12 @@ cb1 = Checkbutton(root, text = "테스트", variable=chk, command=fun2)
 cb1.pack()
 
 rb1 = Radiobutton(root, text = "1", variable = mv, value = 1, command = set)
-rb1.pack(side = LEFT, padx= 5, pady= 5)
+rb1.pack(side = RIGHT, padx= 5, pady= 5)
 
 rb2 = Radiobutton(root, text = "2", variable = mv, value = 2, command = set)
-rb2.pack(side = LEFT, padx= 5, pady= 5)
+rb2.pack(side = RIGHT, padx= 5, pady= 5)
 
 rb3 = Radiobutton(root, text = "3", variable = mv, value = 3, command = set)
-rb3.pack(side = LEFT, padx= 5, pady= 5)
-"""
+rb3.pack(side = RIGHT, padx= 5, pady= 5)
 
 root.mainloop()
