@@ -88,7 +88,7 @@ def save(strs) :
     if (len(sec) == 1) :
         sec = "0" + sec
     fn = "Project/Logs/log_" + hr + "_" + min + "_" + sec + ".log"
-    f3 = open(fn, "w")
+    f3 = open(fn, "w", encoding="UTF-8")
 
     for i in strs.split("\n") :
         f3.writelines(i)
@@ -137,14 +137,18 @@ def run(backGround, role) :
     dt = asDict(ans)
     if (dt == False) :
         print("Error! regenerating...!")
-        print(ans)
         run(backGround, role)
+        return
     else :
         pass
     #print(dt)
 
     FileName = "Project/Data/" + name
-    os.mkdir(FileName)
+    try :
+        if not os.path.exists(FileName) :
+            os.mkdir(FileName)
+    except OSError :
+        print("ERROR")
 
     saveAsTxt(ans, FileName)
 
@@ -154,7 +158,13 @@ def run(backGround, role) :
 
     return dt
 
+for i in range(0, 10, 1) :
+    run("판타지", "기사")
+
+"""
+
 backG = str(input("배경을 입력하세요 : "))
 role = str(input("역할을 입력하세요 : "))
 
 run(backG, role)
+"""

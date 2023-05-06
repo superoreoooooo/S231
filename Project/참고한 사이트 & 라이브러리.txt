@@ -1,0 +1,11 @@
+https://whitewing4139.tistory.com/196 => tkinter Text widget
+https://scribblinganything.tistory.com/278 => tkinter multiwindow
+https://blog.naver.com/PostView.nhn?blogId=audiendo&logNo=220791080634 => tkinter Textbox widget
+https://whitewing4139.tistory.com/186 => tkinter layout
+https://platform.openai.com/docs/libraries => openAi library (to use chatGPT)
+https://github.com/benno1237/MinePI => MinePI libraty (to display player skin)
+https://minepi.readthedocs.io/en/latest/installation.html => MinePI documentation
+https://kblck.com/487 => solve pyyaml library encoding error
+https://jsikim1.tistory.com/215 => time module instruction
+https://blockdmask.tistory.com/554 => folder creation
+https://auto-trading.tistory.com/entry/%ED%8A%B9%EA%B0%95-%EC%9B%B9%ED%81%AC%EB%A1%A4%EB%A7%81Web-Crowling-%EA%B8%B0%EC%B4%88-%EA%B0%9C%EB%85%90%EA%B3%BC-%EC%BD%94%EB%93%9C-%EA%B5%AC%ED%98%84with-Python => web crowling

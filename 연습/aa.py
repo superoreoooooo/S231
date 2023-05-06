@@ -1,5 +1,11 @@
-import time
+import asyncio
+from minepi import Player
 
-now = time
+async def main():
+    p = Player(name="superoreo")
+    await p.initialize()
 
-print("Project/Data/Logs/log_" + str(now.localtime().tm_hour) + "_" + str(now.localtime().tm_min) + "_" + str(now.localtime().tm_sec) + ".txt")
+    await p.skin.render_skin(hr=30, vr=-30, display_cape=True, display_second_layer=True, aa=True)
+    p.skin.skin.show()
+
+asyncio.run(main())
