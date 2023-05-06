@@ -1,5 +1,9 @@
 import yaml
+import os
+import time
 from GPT3Connect import getAns
+
+name = ""
 
 def getQ(bg, role) :
     return str("배경은 " + bg + " 배경이고, 역할은 " + role + "으로 해줘.")
@@ -11,16 +15,22 @@ def getPrompt() :
     return str(p[0])
 
 def asDict(answer) :
+    global name
     ans_sp = answer.split("\n")
     _data = {}
     _npcName = ""
     _story = ""
     _quest = {}
-    for s in range(0, len(ans_sp) - 3, 1) :
+    s = 0
+
+    #for s in range(0, len(ans_sp) - 5, 1) :
+    while (s <= len(ans_sp) - 5) :
         if (ans_sp[s] != "") :
             #print(ans_sp[s])
             if ("NPC" in ans_sp[s] and "이름" in ans_sp[s]) :
                 _npcName = ans_sp[s].split(":")[1]
+                name = _npcName
+                print(name)
             elif ("스토리" in ans_sp[s] and ans_sp[s].find("스토리") == 0) :
                 _story = ans_sp[s].split(":")[1]
             else :
@@ -28,11 +38,6 @@ def asDict(answer) :
             for i in range(1, 5, 1) :
                 if ("퀘스트" in ans_sp[s] and str(i) in ans_sp[s]) :
                     __quest = {}
-                    _Q_1stname = ""
-                    _Q_2ndName = ""
-                    _Q_story = ""
-                    _Q_task = ""
-                    _Q_reward = ""
 
                     _Q_1stname = ans_sp[s].split(":")[1]
                     _Q_2ndName = ans_sp[s + 1].split(":")[1]
@@ -47,6 +52,9 @@ def asDict(answer) :
                     __quest["보상"] = _Q_reward
 
                     _quest["퀘스트" + str(i)] = __quest
+                if (i == 4) :
+                    break
+        s += 1
     
     _data["이름"] = _npcName
     _data["스토리"] = _story
@@ -54,28 +62,68 @@ def asDict(answer) :
 
     return _data
 
-prompt = getPrompt()
-question = getQ("판타지", "왕실 직속 기사")
+def save(strs) :
+    now = time
+    fn = "Project/Data/Logs/log_" + str(now.localtime().tm_hour) + "_" + str(now.localtime().tm_min) + "_" + str(now.localtime().tm_sec) + ".txt"
+    f3 = open(fn, "w")
 
-print("prompt : " +  prompt, end = "\n================================================\n")
-print("question : " + question, end = "\n================================================\n")
+    for i in strs.split("\n") :
+        f3.writelines(i)
+        f3.writelines("\n")
 
-ans = getAns(prompt, question)
+    print("log saved! " + f3.name)
 
-dt = asDict(ans)
-print(dt)
+    f3.close()
 
-with open("Project/Data/result.yml", "w") as f:
-    yaml.dump(dt, f, default_flow_style=False, allow_unicode=True)
+def saveAsTxt(string, FileName) :
+    f1 = open(FileName + "/" + name + ".txt", "w")
 
-f1 = open("Project/Data/text.txt", "w")
+    for i in string.split("\n") :
+        f1.writelines(i)
+        f1.writelines("\n")
 
-ans_split = ans.split("\n")
+    print("file saved as TXT! " + f1.name)
 
-for i in ans_split :
-    f1.writelines(i)
-    f1.writelines("\n")
+    f1.close()
 
-print("file saved!" + f1.name)
+def saveAsYaml(dictionary, FileName) :
+    f2 = open(FileName + "/" + name + ".yml", "w")
 
-f1.close()
+    with open(FileName + "/" + name + ".yml", "w") as f:
+        yaml.dump(dictionary, f, default_flow_style=False, allow_unicode=True)
+        
+    print("file saved as YAML! " + f2.name)
+
+    f2.close()
+
+def run(backGround, role) :
+    print("Generating....")
+
+    prompt = getPrompt()
+    question = getQ(backGround, role)
+    #question = getQ("판타지", "왕실 직속 기사")
+
+    #print("prompt : " +  prompt, end = "\n================================================\n")
+    #print("question : " + question, end = "\n================================================\n")
+
+    ans = getAns(prompt, question)
+    #print(ans)
+
+    save(ans)
+
+    dt = asDict(ans)
+    #print(dt)
+
+    FileName = "Project/Data/" + name
+    os.mkdir(FileName)
+
+    saveAsTxt(ans, FileName)
+
+    saveAsYaml(dt, FileName)
+
+    print("complete!")
+
+backG = str(input("배경을 입력하세요 : "))
+role = str(input("역할을 입력하세요 : "))
+
+run(backG, role)

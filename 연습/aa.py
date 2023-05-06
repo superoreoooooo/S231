@@ -1,3 +1,5 @@
-s = "스토리 : 나는 배가 고파서 점심을 안먹었다"
+import time
 
-print(s.find("토"))
+now = time
+
+print("Project/Data/Logs/log_" + str(now.localtime().tm_hour) + "_" + str(now.localtime().tm_min) + "_" + str(now.localtime().tm_sec) + ".txt")
