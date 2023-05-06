@@ -1,7 +1,3 @@
-import bb
+s = "스토리 : 나는 배가 고파서 점심을 안먹었다"
 
-bb.b1()
-bb.b2()
-bb.b3()
-
-print(bb.cnt)
+print(s.find("토"))
