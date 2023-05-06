@@ -158,9 +158,6 @@ def run(backGround, role) :
 
     return dt
 
-for i in range(0, 10, 1) :
-    run("판타지", "기사")
-
 """
 
 backG = str(input("배경을 입력하세요 : "))
