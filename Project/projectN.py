@@ -87,7 +87,7 @@ def save(strs) :
         min = "0" + min
     if (len(sec) == 1) :
         sec = "0" + sec
-    fn = "Project/Data/Logs/log_" + hr + "_" + min + "_" + sec + ".log"
+    fn = "Project/Logs/log_" + hr + "_" + min + "_" + sec + ".log"
     f3 = open(fn, "w")
 
     for i in strs.split("\n") :
