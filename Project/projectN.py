@@ -14,6 +14,12 @@ def getPrompt() :
     f.close()
     return str(p[0])
 
+def check(answer) :
+    if ("NPC" in answer and "1" in answer and "2" in answer and "3" in answer and "4" in answer and "스토리" in answer and answer.count("\n") <= 28) :
+        return True
+    else :
+        return False
+
 def asDict(answer) :
     global name
     ans_sp = answer.split("\n")
@@ -23,38 +29,46 @@ def asDict(answer) :
     _quest = {}
     s = 0
 
-    #for s in range(0, len(ans_sp) - 5, 1) :
-    while (s <= len(ans_sp) - 5) :
-        if (ans_sp[s] != "") :
-            #print(ans_sp[s])
-            if ("NPC" in ans_sp[s] and "이름" in ans_sp[s]) :
-                _npcName = ans_sp[s].split(":")[1]
-                name = _npcName
-                print(name)
-            elif ("스토리" in ans_sp[s] and ans_sp[s].find("스토리") == 0) :
-                _story = ans_sp[s].split(":")[1]
-            else :
-                pass
-            for i in range(1, 5, 1) :
-                if ("퀘스트" in ans_sp[s] and str(i) in ans_sp[s]) :
-                    __quest = {}
+    if (not check(answer)) :
+        print("error!")
+        return False
 
-                    _Q_1stname = ans_sp[s].split(":")[1]
-                    _Q_2ndName = ans_sp[s + 1].split(":")[1]
-                    _Q_story = ans_sp[s + 2].split(":")[1]
-                    _Q_task = ans_sp[s + 3].split(":")[1]
-                    _Q_reward = ans_sp[s + 4].split(":")[1]
+    try :
+        #for s in range(0, len(ans_sp) - 5, 1) :
+        while (s <= len(ans_sp) - 5) :
+            if (ans_sp[s] != "") :
+                #print(ans_sp[s])
+                if ("NPC" in ans_sp[s] and "이름" in ans_sp[s]) :
+                    _npcName = ans_sp[s].split(":")[1]
+                    name = _npcName
+                    print(name)
+                elif ("스토리" in ans_sp[s] and ans_sp[s].find("스토리") == 0) :
+                    _story = ans_sp[s].split(":")[1]
+                else :
+                    pass
+                for i in range(1, 5, 1) :
+                    if (("퀘스트" in ans_sp[s] and str(i) in ans_sp[s]) or (ans_sp[s][0] == str(i))) :
+                        __quest = {}
 
-                    __quest["제목"] = _Q_1stname
-                    __quest["부제"] = _Q_2ndName
-                    __quest["내용"] = _Q_story
-                    __quest["과제"] = _Q_task
-                    __quest["보상"] = _Q_reward
+                        _Q_1stname = ans_sp[s].split(":")[1]
+                        _Q_2ndName = ans_sp[s + 1].split(":")[1]
+                        _Q_story = ans_sp[s + 2].split(":")[1]
+                        _Q_task = ans_sp[s + 3].split(":")[1]
+                        _Q_reward = ans_sp[s + 4].split(":")[1]
 
-                    _quest["퀘스트" + str(i)] = __quest
-                if (i == 4) :
-                    break
-        s += 1
+                        __quest["제목"] = _Q_1stname
+                        __quest["부제"] = _Q_2ndName
+                        __quest["내용"] = _Q_story
+                        __quest["과제"] = _Q_task
+                        __quest["보상"] = _Q_reward
+
+                        _quest["퀘스트" + str(i)] = __quest
+                    if (i == 4) :
+                        break
+            s += 1
+    except :
+        print("error!")
+        return False
     
     _data["이름"] = _npcName
     _data["스토리"] = _story
@@ -64,7 +78,16 @@ def asDict(answer) :
 
 def save(strs) :
     now = time
-    fn = "Project/Data/Logs/log_" + str(now.localtime().tm_hour) + "_" + str(now.localtime().tm_min) + "_" + str(now.localtime().tm_sec) + ".txt"
+    hr = str(now.localtime().tm_hour)
+    min = str(now.localtime().tm_min)
+    sec = str(now.localtime().tm_sec)
+    if (len(hr) == 1) :
+        hr = "0" + hr
+    if (len(min) == 1) :
+        min = "0" + min
+    if (len(sec) == 1) :
+        sec = "0" + sec
+    fn = "Project/Data/Logs/log_" + hr + "_" + min + "_" + sec + ".log"
     f3 = open(fn, "w")
 
     for i in strs.split("\n") :
@@ -112,6 +135,12 @@ def run(backGround, role) :
     save(ans)
 
     dt = asDict(ans)
+    if (dt == False) :
+        print("Error! regenerating...!")
+        print(ans)
+        run(backGround, role)
+    else :
+        pass
     #print(dt)
 
     FileName = "Project/Data/" + name
