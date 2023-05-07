@@ -35,7 +35,7 @@ def clickGenButton() :
     npcData = projectN_main.run(bg.get(), role.get())
 
 def check() :
-    msg = "이름 : " + npcData["이름"] + "\n스토리 : " + npcData["스토리"] + "\n퀘스트" + "\n퀘스트1 : " + str(npcData["퀘스트"]["퀘스트1"]) + "\n퀘스트2 : " + str(npcData["퀘스트"]["퀘스트2"]) + "\n퀘스트3 : " + str(npcData["퀘스트"]["퀘스트3"]) + "\n퀘스트4 : " + str(npcData["퀘스트"]["퀘스트4"])
+    msg = "이름 : " + npcData["이름"] + "\n스토리 : " + npcData["스토리"] + "\n퀘스트" + str(npcData["퀘스트"])
     messagebox.showinfo("check", msg)
 
 label_MainText = Label(root, text="Project N ~게임 NPC 생성기~", font=("Ariel", 15))

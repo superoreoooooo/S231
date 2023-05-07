@@ -78,6 +78,9 @@ def asDict(answer) :
 
 def save(strs) :
     now = time
+    time_format = "%y%m%d_%H%M%S"
+
+    """
     hr = str(now.localtime().tm_hour)
     min = str(now.localtime().tm_min)
     sec = str(now.localtime().tm_sec)
@@ -88,6 +91,8 @@ def save(strs) :
     if (len(sec) == 1) :
         sec = "0" + sec
     fn = "Project/Logs/log_" + hr + "_" + min + "_" + sec + ".log"
+    """
+    fn = "Project/Logs/log_" + time.strftime(time_format, now.localtime()) + ".log"
     f3 = open(fn, "w", encoding="UTF-8")
 
     for i in strs.split("\n") :

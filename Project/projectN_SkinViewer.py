@@ -1,4 +1,3 @@
-import asyncio
 from minepi import Player
 
 async def main(skinName):
@@ -9,3 +8,5 @@ async def main(skinName):
     p.skin.skin.show()
 
 #asyncio.run(main())
+
+#todo 이거 걍 하지말까 고민해보기

@@ -6,3 +6,5 @@ def showSkin(Nickname) :
         asyncio.run(projectN_SkinViewer.main(Nickname))
     except :
         print("ERROR!")
+
+showSkin("superoreo")
