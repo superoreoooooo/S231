@@ -8,11 +8,7 @@ class Ms:
         self.kor = kor
         self.eng = eng
         self.math = math
+        self.getAvg()
     
     def getAvg(self) :
         self.avg = (self.kor + self.eng + self.math) / 3
-    
-s1 = Ms(50, 60 ,70)
-s1.getAvg()
-
-print(s1.avg)
