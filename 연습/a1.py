@@ -16,4 +16,4 @@ class Ms:
         self.avg = (self.kor + self.eng + self.math) / 3
         
     def getStr(self) :
-        return f"{self.id} : {self.avg}"
+        return f"{self.id} : {int(self.avg)}"
