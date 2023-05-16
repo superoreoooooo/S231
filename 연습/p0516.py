@@ -8,4 +8,4 @@ img = img.rotate(45, expand = True)
 img = img.filter(ImageFilter.CONTOUR())
 
 img.show()
-img.save("연습/photo/op02.jpg")
+img.save("연습/photo/output.jpg")
