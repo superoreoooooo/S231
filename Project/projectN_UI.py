@@ -38,11 +38,11 @@ def check() :
     msg = "이름 : " + npcData["이름"] + "\n스토리 : " + npcData["스토리"] + "\n퀘스트" + str(npcData["퀘스트"])
     messagebox.showinfo("check", msg)
 
-label_MainText = Label(root, text="Project N ~게임 NPC 생성기~", font=("Ariel", 15))
+label_MainText = Label(root, text="Project N =게임 NPC 생성기=", font=("Ariel", 15))
 label_bg = Label(root, width=10, text="배경")
 label_role = Label(root, width=10, text="역할")
 
-textbox_bg = Entry(root, width=30, textvariable=bg)
+textbox_bg = Entry(root, width=30, textvariable=bg) 
 textbox_role = Entry(root, width=30, textvariable=role)
 
 button_Generate = Button(root, text="Generate", width=10, command=clickGenButton)
