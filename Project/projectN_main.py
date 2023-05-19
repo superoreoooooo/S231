@@ -41,7 +41,7 @@ def asDict(answer) :
                 if ("NPC" in ans_sp[s] and "이름" in ans_sp[s]) :
                     _npcName = ans_sp[s].split(":")[1]
                     name = _npcName
-                    print(name)
+                    #print(name)
                 elif ("스토리" in ans_sp[s] and ans_sp[s].find("스토리") == 0) :
                     _story = ans_sp[s].split(":")[1]
                 else :
