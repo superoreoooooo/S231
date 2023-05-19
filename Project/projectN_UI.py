@@ -24,6 +24,7 @@ def clickGenButton() :
         messagebox.showinfo("ERROR","배경과 역할을 입력해 주세요.")
         return
 
+
     new = Toplevel()
     new.title("Message")
     new.resizable(width=False, height=False)
