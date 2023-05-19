@@ -104,7 +104,7 @@ def save(strs) :
     f3.close()
 
 def saveAsTxt(string, FileName) :
-    f1 = open(FileName + "/" + name + ".txt", "w")
+    f1 = open(FileName + "/" + name + ".txt", "w", encoding="UTF-8")
 
     for i in string.split("\n") :
         f1.writelines(i)
@@ -115,9 +115,9 @@ def saveAsTxt(string, FileName) :
     f1.close()
 
 def saveAsYaml(dictionary, FileName) :
-    f2 = open(FileName + "/" + name + ".yml", "w")
+    f2 = open(FileName + "/" + name + ".yml", "w", encoding="UTF-8")
 
-    with open(FileName + "/" + name + ".yml", "w") as f:
+    with open(FileName + "/" + name + ".yml", "w", encoding="UTF-8") as f:
         yaml.dump(dictionary, f, default_flow_style=False, allow_unicode=True)
         
     print("file saved as YAML! " + f2.name)
