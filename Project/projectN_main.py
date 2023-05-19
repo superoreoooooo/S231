@@ -39,22 +39,22 @@ def asDict(answer) :
             if (ans_sp[s] != "") :
                 #print(ans_sp[s])
                 if ("NPC" in ans_sp[s] and "이름" in ans_sp[s]) :
-                    _npcName = ans_sp[s].split(":")[1]
+                    _npcName = ans_sp[s].split(": ")[1]
                     name = _npcName
                     #print(name)
                 elif ("스토리" in ans_sp[s] and ans_sp[s].find("스토리") == 0) :
-                    _story = ans_sp[s].split(":")[1]
+                    _story = ans_sp[s].split(": ")[1]
                 else :
                     pass
                 for i in range(1, 5, 1) :
                     if (("퀘스트" in ans_sp[s] and str(i) in ans_sp[s]) or (ans_sp[s][0] == str(i))) :
                         __quest = {}
 
-                        _Q_1stname = ans_sp[s].split(":")[1]
-                        _Q_2ndName = ans_sp[s + 1].split(":")[1]
-                        _Q_story = ans_sp[s + 2].split(":")[1]
-                        _Q_task = ans_sp[s + 3].split(":")[1]
-                        _Q_reward = ans_sp[s + 4].split(":")[1]
+                        _Q_1stname = ans_sp[s].split(": ")[1]
+                        _Q_2ndName = ans_sp[s + 1].split(": ")[1]
+                        _Q_story = ans_sp[s + 2].split(": ")[1]
+                        _Q_task = ans_sp[s + 3].split(": ")[1]
+                        _Q_reward = ans_sp[s + 4].split(": ")[1]
 
                         __quest["제목"] = _Q_1stname
                         __quest["부제"] = _Q_2ndName
