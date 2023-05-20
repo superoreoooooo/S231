@@ -8,6 +8,8 @@ https://platform.openai.com/docs/libraries => openAi library (to use chatGPT)
 https://kblck.com/487 => solve pyyaml library encoding error
 https://jsikim1.tistory.com/215 => time module instruction
 https://blockdmask.tistory.com/554 => folder creation
+https://www.flaticon.com/free-icon/letter-n_85 => icon
+https://comgong-stone.tistory.com/m/entry/30%EC%B4%88-%EC%BD%94%EB%94%A9%EB%B9%84%EB%B2%95-tkinter%EC%97%90%EC%84%9C-icon%EC%9D%84-%EC%83%9D%EC%84%B1 => apply icon
 
 //Not Used
 
