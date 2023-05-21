@@ -1,7 +1,7 @@
 import openai
 
 def getAns(condition, Q) :
-    f = open("Project/Data/ApiKey.txt", "r", encoding="UTF-8")
+    f = open("ProjectN/Data/ApiKey.txt", "r", encoding="UTF-8")
     openai.api_key = f.readline()
     f.close()
     result = openai.ChatCompletion.create(

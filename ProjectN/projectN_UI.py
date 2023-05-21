@@ -3,7 +3,7 @@ from tkinter import messagebox
 import projectN_main
 
 root = Tk()
-root.iconbitmap("Project/Data/icon.ico")
+root.iconbitmap("ProjectN/Data/icon.ico")
 root.title("Project N")
 #root.geometry("1024x768")
 root.resizable(width=False, height=False)
@@ -43,7 +43,7 @@ def check() :
         msg = "이름 : " + npcData["이름"] + "\n스토리 : " + npcData["스토리"] + "\n퀘스트" + str(npcData["퀘스트"])
         messagebox.showinfo("check", msg)
 
-image = PhotoImage(file="Project/Data/ico_128.png")
+image = PhotoImage(file="ProjectN/Data/ico_128.png")
 label_img = Label(root, image=image)
 label_bg = Label(root, width=10, text="Genre", font=("appleSDGothicNeoL00"))
 label_role = Label(root, width=10, text="Role", font=("appleSDGothicNeoL00"))

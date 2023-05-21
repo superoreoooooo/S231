@@ -9,7 +9,7 @@ def getQ(bg, role) :
     return str("배경은 " + bg + " 배경이고, 역할은 " + role + "으로 해줘.")
 
 def getPrompt() :
-    f = open("Project/Data/prompt.txt", "r", encoding="UTF-8")
+    f = open("ProjectN/Data/prompt.txt", "r", encoding="UTF-8")
     p = f.readlines()
     f.close()
     return str(p[0])
@@ -92,7 +92,7 @@ def save(strs) :
         sec = "0" + sec
     fn = "Project/Logs/log_" + hr + "_" + min + "_" + sec + ".log"
     """
-    fn = "Project/Logs/log_" + time.strftime(time_format, now.localtime()) + ".log"
+    fn = "ProjectN/Logs/log_" + time.strftime(time_format, now.localtime()) + ".log"
     f3 = open(fn, "w", encoding="UTF-8")
 
     for i in strs.split("\n") :
@@ -148,7 +148,7 @@ def run(backGround, role) :
         pass
     #print(dt)
 
-    FileName = "Project/Data/" + name
+    FileName = "ProjectN/Data/" + name
     try :
         if not os.path.exists(FileName) :
             os.mkdir(FileName)
