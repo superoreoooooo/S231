@@ -90,7 +90,7 @@ def save(strs) :
         min = "0" + min
     if (len(sec) == 1) :
         sec = "0" + sec
-    fn = "Project/Logs/log_" + hr + "_" + min + "_" + sec + ".log"
+    fn = "ProjectN/Logs/log_" + hr + "_" + min + "_" + sec + ".log"
     """
     fn = "ProjectN/Logs/log_" + time.strftime(time_format, now.localtime()) + ".log"
     f3 = open(fn, "w", encoding="UTF-8")
